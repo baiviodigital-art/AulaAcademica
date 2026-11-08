@@ -986,13 +986,14 @@ window.AULA_ALERTAS = [
   { id:"a1", temas:[2,4], tipo:"discrepancia",
     titulo:"Modalidades que deben constar por escrito",
     texto:"El tema 2 enumera entre los contratos que deben formalizarse por escrito el de obra o servicio determinado, la interinidad, el eventual y el de fomento de la contratación indefinida y apoyo a los emprendedores. El tema 4 indica que, tras la reforma 32/2021, desaparece el contrato de obra o servicio y que el eventual y la interinidad pasan a ser el contrato por circunstancias de la producción y el de sustitución.",
-    refs:[["T2",8],["T4",28]],
+    refs:[["T2",8],["T4",28],["P1",4]],
+    correccion:"La corrección de la Práctica 1 sigue la versión del tema 4: tras la reforma de 2021 solo quedan el contrato por circunstancias de la producción y el de sustitución. No dice nada sobre la lista de forma escrita del tema 2.",
     pregunta:"¿Qué lista de contratos de forma escrita obligatoria debo usar en el examen?" },
   { id:"a2", temas:[4], tipo:"discrepancia",
     titulo:"Duraciones de los contratos temporales",
     texto:"Las págs. 6, 18 y 19 del tema 4 recogen el contrato de obra o servicio (3 años, ampliable 12 meses por convenio) y el eventual (6 meses en un periodo de 12). Las págs. 29-30 y 32 describen el contrato por circunstancias de la producción: imprevisibles hasta 6 meses ampliable a 1 año por convenio sectorial, y previsibles hasta 90 días al año.",
-    refs:[["T4",6],["T4",18],["T4",19],["T4",29],["T4",30],["T4",32]],
-    pregunta:"¿Debo estudiar la regulación anterior a la reforma o solo la vigente según la pág. 28?" },
+    refs:[["T4",6],["T4",18],["T4",19],["T4",29],["T4",30],["T4",32],["P1",7]],
+    correccion:"La corrección de la Práctica 1 aplica la regulación vigente: contrato por circunstancias de la producción imprevisibles de hasta 6 meses, ampliable a un año solo por convenio sectorial (no por convenio de empresa).",    pregunta:"¿Debo estudiar la regulación anterior a la reforma o solo la vigente según la pág. 28?" },
   { id:"a3", temas:[4], tipo:"discrepancia",
     titulo:"Indemnización al finalizar la interinidad o sustitución",
     texto:"La pág. 12 indica que la interinidad no tenía indemnización en el ET, pero que, según el TJUE y tribunales españoles, debe indemnizarse con 20 días por año (máximo 12 mensualidades). La pág. 34 dice, sobre el contrato de sustitución, que “no procede indemnización”.",
@@ -1006,13 +1007,13 @@ window.AULA_ALERTAS = [
   { id:"a5", temas:[2,4], tipo:"discrepancia",
     titulo:"Duración máxima del periodo de prueba",
     texto:"El tema 2 fija un máximo de seis meses para técnicos titulados y de dos o tres meses para el resto, y menciona el contrato de apoyo a emprendedores como excepción. El tema 4 menciona la ampliación del periodo de prueba a un año en empresas de menos de 50 trabajadores con contratación indefinida. El tema 1 menciona que el contrato de apoyo a emprendedores supone libre rescisión durante un año.",
-    refs:[["T2",10],["T4",14],["T1",22]],
-    pregunta:"¿Sigue vigente el periodo de prueba de un año que menciona el tema 4?" },
+    refs:[["T2",10],["T4",14],["T1",22],["P1",5]],
+    correccion:"La corrección de la Práctica 1 da como máximos 6 meses, 2 o 3 meses y 1 mes, y no menciona el periodo de prueba de un año del tema 4. No resuelve si sigue vigente.",    pregunta:"¿Sigue vigente el periodo de prueba de un año que menciona el tema 4?" },
   { id:"a6", temas:[2], tipo:"consulta",
     titulo:"Periodo de prueba de “dos o tres meses”",
     texto:"El tema 2 dice “ni de dos o tres meses para el resto (según la empresa tenga 25 o más trabajadores o menos de 25)”. La frase no permite saber con seguridad qué plazo corresponde a cada tamaño de empresa. La aplicación no lo deduce.",
-    refs:[["T2",10]],
-    pregunta:"¿Cuál de los dos plazos corresponde a las empresas de menos de 25 trabajadores?" },
+    refs:[["T2",10],["P1",5]],
+    correccion:"La corrección de la Práctica 1 lo concreta: 2 meses en empresas de 25 o más trabajadores y 3 meses en las de menos de 25. El tema 2 no lo dice con esa claridad, así que es la corrección quien lo fija.",    pregunta:"¿Cuál de los dos plazos corresponde a las empresas de menos de 25 trabajadores?" },
   { id:"a7", temas:[6], tipo:"discrepancia",
     titulo:"Umbral del descanso durante la jornada (“bocadillo”)",
     texto:"La pág. 5 dice 15 minutos en jornada parcial continuada y 30 en jornada completa. La pág. 11 dice 15 minutos si la jornada continuada supera cuatro horas y media (seis para menores; 30 minutos para menores). La pág. 23 cita el art. 34.4 ET: 15 minutos si la jornada continuada excede de seis horas y 30 minutos para menores si excede de cuatro horas y media.",
@@ -1470,6 +1471,11 @@ K("t6k2",6,3,"Vacaciones interrumpidas por una baja",
 
 </script>
 <script>
+/* Práctica 1: no incluida en la versión pública. */
+window.AULA_FUENTES.push({"id": "P1", "tema": "1–4", "doc": "Práctica 1 (temas 1–4) · corrección", "corto": "P1", "file": "Practica1.docx", "titulo": "Práctica 1: corrección", "unidad": "apdo.", "formato": "DOCX", "version": "v1", "incorporado": "2026-11-08", "paginas": {"1": "", "2": "", "3": "", "4": "", "5": "", "6": "", "7": "", "8": "", "9": "", "10": ""}, "total": 10, "textoOmitido": true});
+
+</script>
+<script>
 /* ===== Núcleo: utilidades, estado, persistencia, IA ===== */
 const TZ = "Atlantic/Canary";
 const TEMAS_TOTAL = 16;
@@ -1523,18 +1529,18 @@ const tituloTema = n => TEMAS[n]?.titulo || "Pendiente de recibir";
 
 function refLabel(r){
   const f = FMAP[r[0]]; if (!f) return `${r[0]} · ${r[1]}`;
-  return `T${f.tema} · ${f.unidad} ${r[1]}`;
+  return f.doc ? `${f.corto||f.id} · ${f.unidad} ${r[1]}` : `T${f.tema} · ${f.unidad} ${r[1]}`;
 }
 function refFull(r){
   const f = FMAP[r[0]]; if (!f) return `Fuente ${r[0]} no disponible`;
-  return `Tema ${f.tema} · ${f.file} (${f.version}) · ${f.unidad} ${r[1]}`;
+  return `${f.doc ? f.doc : "Tema "+f.tema} · ${f.file} (${f.version}) · ${f.unidad} ${r[1]}`;
 }
 function refValid(r){ const f = FMAP[r?.[0]]; return !!(f && f.paginas && f.paginas[r[1]] !== undefined); }
 const refBtn = r => `<button type="button" class="ref" data-act="ver-ref" data-src="${esc(r[0])}" data-p="${esc(r[1])}" title="${esc(refFull(r))}">${esc(refLabel(r))}</button>`;
 const refsHTML = rs => `<span class="refs">${(rs||[]).map(refBtn).join("")}</span>`;
 const origenChip = q => ({
   generada:`<span class="chip info" title="Pregunta nueva creada para entrenar a partir del temario">Generada para entrenar</span>`,
-  original:`<span class="chip ok" title="Pregunta original de una práctica o examen aportado">Original</span>`,
+  original:`<span class="chip ok" title="Pregunta original de una práctica o examen aportado">${q.correccion?"Original · Práctica 1":"Original"}</span>`,
   variante:`<span class="chip" title="Adaptación de una pregunta original">Variante de original</span>`
 }[q.origen] || `<span class="chip">${esc(q.origen)}</span>`);
 const tipoNombre = {test:"Tipo test", corta:"Pregunta corta", caso:"Caso práctico", tarjeta:"Tarjeta de repaso"};
@@ -1823,7 +1829,7 @@ function showRef(src, p){
   const f = FMAP[src]; if (!f){ modal(`<h2>Fuente no disponible</h2><p>La fuente ${esc(src)} no está incorporada.</p>`); return; }
   const txt = f.paginas[p];
   const max = Math.max(...Object.keys(f.paginas).map(Number));
-  modal(`<div class="eyebrow">Material de la asignatura · ${esc(f.formato)}</div><h2>Tema ${f.tema}: ${esc(f.titulo)}</h2>
+  modal(`<div class="eyebrow">Material de la asignatura · ${esc(f.formato)}</div><h2>${f.doc ? esc(f.doc) : `Tema ${f.tema}: ${esc(f.titulo)}`}</h2>
   <p class="small muted mono">${esc(f.file)} · ${esc(f.version)} · ${esc(f.unidad)} ${esc(p)} de ${max}</p>
   ${f.textoOmitido ? `<div class="notice"><b class="ico">i</b><span>Esta versión pública no incluye el texto del temario. Consulta tu archivo <span class="mono">${esc(f.file)}</span>, ${esc(f.unidad)} ${esc(p)}.</span></div>` : txt ? `<div class="srcpage">${esc(txt)}</div>` : `<div class="notice warn"><b class="ico">!</b><span>Esta ${esc(f.unidad)} no contiene texto legible.</span></div>`}
   <p class="tiny muted">Texto extraído del archivo aportado. Las marcas “[Transcrito de imagen]” indican diapositivas que solo tenían imagen y se transcribieron al incorporar el tema.</p>
@@ -1990,7 +1996,7 @@ function vTema(n){
     ${fs.map(f=>`<div class="between small"><span><b>${esc(f.file)}</b> · ${esc(f.formato)} · ${f.total} ${f.unidad==="diap."?"diapositivas":"páginas"}</span><span class="chip src">${esc(f.version)} · incorporado ${fmtD(f.incorporado)}</span></div>`).join("")}
     <p class="tiny muted">Las referencias usan la numeración del archivo (${fs.map(f=>f.unidad==="diap."?"diapositiva":"página del PDF").join(", ")}). Pulsa cualquier referencia para ver el texto de esa página.</p></section>
   ${alertas.length ? `<section class="card stack"><h2>Discrepancias y dudas para el profesor</h2><p class="small muted">La aplicación no decide qué versión prevalece. Consulta estas cuestiones en clase.</p>
-    ${alertas.map(a=>`<div class="stack-s"><div class="row"><span class="chip ${a.tipo==="discrepancia"?"warn":"info"}">${a.tipo==="discrepancia"?"Discrepancia":"Consultar"}</span><b>${esc(a.titulo)}</b></div><p class="small">${esc(a.texto)}</p>${refsHTML(a.refs)}<p class="small muted">Pregunta sugerida: ${esc(a.pregunta)}</p></div>`).join("")}</section>` : ""}
+    ${alertas.map(a=>`<div class="stack-s"><div class="row"><span class="chip ${a.tipo==="discrepancia"?"warn":"info"}">${a.tipo==="discrepancia"?"Discrepancia":"Consultar"}</span><b>${esc(a.titulo)}</b></div><p class="small">${esc(a.texto)}</p>${a.correccion?`<p class="small"><span class="chip ok">Práctica 1</span> ${esc(a.correccion)}</p>`:""}${refsHTML(a.refs)}<p class="small muted">Pregunta sugerida: ${esc(a.pregunta)}</p></div>`).join("")}</section>` : ""}
   <div class="grid g2">
     <section class="card stack-s"><h2>Esquema de contenidos</h2><ol class="stack-s" style="padding-left:20px;margin:0">${t.esquema.map(e=>`<li><span>${esc(e[0])}</span> ${refsHTML(e[1])}</li>`).join("")}</ol></section>
     <section class="card stack-s"><h2>Conceptos esenciales</h2>${t.conceptos.map(c=>`<div><b>${esc(c[0])}.</b> <span class="small">${esc(c[1])}</span> ${refsHTML(c.slice(2))}</div>`).join("")}</section>
@@ -2095,7 +2101,7 @@ function vBanco(){
     ${sel("f-origen","Origen",[["","Todos"],["original","Original (práctica o examen)"],["generada","Generada para entrenar"]])}
     ${sel("f-estado","Estado",[["","Todos"],["nueva","Nueva"],["respondida","Respondida"],["fallada","Fallada"],["pendiente","Pendiente de repaso"]])}
   </section>
-  ${FILT.origen==="original" && !qs.length ? `<div class="empty"><b>No hay preguntas originales todavía</b><span class="small">Las preguntas originales del “Documento de evaluación: temas 1–4” se añadirán cuando lo aportes. Ver <a href="#datos">Fuentes y datos</a>.</span></div>`:""}
+  ${FILT.origen==="original" && !qs.length ? `<div class="empty"><b>No hay preguntas originales todavía</b><span class="small">No hay preguntas originales que coincidan con estos filtros. Por ahora solo está incorporada la Práctica 1 (temas 1–4). Ver <a href="#datos">Fuentes y datos</a>.</span></div>`:""}
   <div class="between"><p class="small muted">${qs.length} preguntas</p>${qs.length?`<button class="btn primary" type="button" data-act="run-list" data-ids="${qs.map(q=>q.id).join(",")}">Practicar estas ${qs.length}</button>`:""}</div>
   <div class="card tscroll"><table><thead><tr><th>Pregunta</th><th>Tema</th><th>Tipo</th><th>Dificultad</th><th>Origen</th><th>Estado</th><th></th></tr></thead><tbody>
   ${qs.map(q=>`<tr><td class="small">${esc(q.enunciado)}${S.revision[q.id]?' <span class="chip warn">Pendiente de revisión</span>':""}</td><td class="mono small">${q.tema}</td><td class="small">${tipoNombre[q.tipo]}</td><td class="small">${difNombre[q.dif]}</td><td>${origenChip(q)}</td><td>${eDot[estadoPregunta(q)]}</td><td><button class="btn small" type="button" data-act="run-one" data-q="${q.id}">Responder</button></td></tr>`).join("") || `<tr><td colspan="7" class="muted">Ninguna pregunta coincide con los filtros.</td></tr>`}
@@ -2212,11 +2218,11 @@ function solucionHTML(q, W){
   const fb = W.fb;
   const falt = fb.faltan || [];
   if (q.tipo === "caso"){
-    return `<div class="stack"><h3>Respuesta modelo y comparación</h3>${q.apartados.map(a=>`<div class="stack-s"><b>${esc(a.id)}) ${esc(a.q)}</b><div class="cmp"><div><div class="eyebrow">Tu respuesta</div>${esc(W.resp[a.id]||"(vacía)")}</div><div><div class="eyebrow">Respuesta modelo</div>${esc(a.modelo)}</div></div></div>`).join("")}
+    return `<div class="stack"><h3>Respuesta modelo y comparación</h3>${q.apartados.map(a=>`<div class="stack-s"><b>${esc(a.id)}) ${esc(a.q)}</b><div class="cmp"><div><div class="eyebrow">Tu respuesta</div>${esc(W.resp[a.id]||"(vacía)")}</div><div><div class="eyebrow">${q.correccion?"Respuesta de la corrección":"Respuesta modelo"}</div>${esc(a.modelo)}</div></div></div>`).join("")}
     ${q.interpretaciones?`<div class="notice info small"><b class="ico">i</b><span><b>Interpretaciones razonables:</b> ${esc(q.interpretaciones)}</span></div>`:""}
     ${falt.length?`<div><b class="small">Elementos imprescindibles que faltaban</b><ul class="small">${falt.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}${refsHTML(q.refs)}</div>`;
   }
-  return `<div class="stack"><h3>Respuesta modelo ajustada a la pregunta</h3><div class="cmp"><div><div class="eyebrow">Tu respuesta</div>${esc(W.resp)}</div><div><div class="eyebrow">Respuesta modelo</div>${esc(q.modelo)}</div></div>
+  return `<div class="stack"><h3>Respuesta modelo ajustada a la pregunta</h3><div class="cmp"><div><div class="eyebrow">Tu respuesta</div>${esc(W.resp)}</div><div><div class="eyebrow">${q.correccion?"Respuesta de la corrección":"Respuesta modelo"}</div>${esc(q.modelo)}</div></div>
     ${falt.length?`<div><b class="small">Elementos imprescindibles que faltaban</b><ul class="small">${falt.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
     ${q.complementarios?.length?`<div><b class="small">Detalles complementarios (suman, pero no son imprescindibles)</b><ul class="small">${q.complementarios.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}${refsHTML(q.refs)}</div>`;
 }
@@ -2681,7 +2687,8 @@ function vDatos(){
     <div id="export-box"></div></section>
   ${IMPORT?importPanel():""}
   <section class="card stack-s"><h2>Documento de evaluación: temas 1–4</h2>
-    ${evs.length? evs.map(e=>`<div class="small"><b>${esc(e.titulo)}</b> · naturaleza: ${esc(e.naturaleza||"sin determinar")} · ${esc(e.descripcion||"")}</div>`).join("") : `<div class="empty"><b>No aportado todavía</b><span class="small">Mencionaste un documento de evaluación de los temas 1–4 y respuestas que Claude elaboró antes, pero no venían entre los archivos. Súbelos en la conversación. Las preguntas originales se guardarán intactas y marcadas como “Original”; las respuestas anteriores de Claude se marcarán como propuestas pendientes de contrastar con el temario, nunca como solución oficial.</span></div>`}</section>
+    ${PREGUNTAS.some(q=>q.correccion)?`<div class="notice ok small"><b class="ico">✓</b><span><b>Práctica 1 (temas 1–4) incorporada</b> el 08/11/2026 desde <span class="mono">Practica1.docx</span>: ${PREGUNTAS.filter(q=>q.correccion).length} preguntas originales con la respuesta de la corrección, marcadas como “Original · Práctica 1”. Las rúbricas de autoevaluación se han extraído de esas respuestas. Sin respuesta en el documento: la sustitución de Laura (Juguetería La Ilusión) y, en el caso de Ana, el plus de nocturnidad, la paga extra de septiembre y el Real Decreto Ley sobre huelga.</span></div><p class="small muted">Siguen sin aportarse las respuestas que Claude elaboró antes.</p>`:""}
+    ${evs.length? evs.map(e=>`<div class="small"><b>${esc(e.titulo)}</b> · naturaleza: ${esc(e.naturaleza||"sin determinar")} · ${esc(e.descripcion||"")}</div>`).join("") : PREGUNTAS.some(q=>q.correccion) ? "" : `<div class="empty"><b>No aportado todavía</b><span class="small">Mencionaste un documento de evaluación de los temas 1–4 y respuestas que Claude elaboró antes, pero no venían entre los archivos. Súbelos en la conversación. Las preguntas originales se guardarán intactas y marcadas como “Original”; las respuestas anteriores de Claude se marcarán como propuestas pendientes de contrastar con el temario, nunca como solución oficial.</span></div>`}</section>
   <section class="card stack-s"><h2>Fuentes incorporadas</h2><div class="tscroll"><table><thead><tr><th>Tema</th><th>Archivo</th><th>Formato</th><th>Versión</th><th>Extensión</th><th>Legibilidad</th></tr></thead><tbody>
     ${FUENTES.sort((a,b)=>a.tema-b.tema).map(f=>{ const pags = Object.values(f.paginas); const leg = pags.filter(t=>t && t.length>40).length; return `<tr><td>${f.tema}</td><td class="small">${esc(f.file)}<div class="tiny muted">${esc(f.titulo)}</div></td><td class="small">${esc(f.formato)}</td><td class="small mono">${esc(f.version)} · ${fmtD(f.incorporado)}</td><td class="small">${f.total} ${f.unidad==="diap."?"diapositivas":"páginas"}</td><td class="small">${f.textoOmitido?"texto no incluido":leg+" con texto"}</td></tr>`; }).join("")}</tbody></table></div>
     <p class="tiny muted">Las páginas sin texto son portadas o cierres (“Título / Subtítulo”).</p></section>
